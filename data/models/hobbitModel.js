@@ -14,21 +14,27 @@ function find() {
 };
 
 // send back a specific hobbit
-function findById() {
-  
+function findById(id) {
+  return db('hobbits')
+    .where({ id })
 };
 
 // add a new hobbit to the db (name required)
-function add() {
-  
+function add(hobbit) {
+  return db('hobbits')
+    .insert(hobbit)
 };
 
 // update a hobbit
-function update() {
-  
+function update(id, name) {
+  return db('hobbits')
+    .where({ id })
+    .update(name)
 };
 
 // delete a hobbit
-function remove() {
-  
+function remove(id) {
+  return db('hobbits')
+    .where({ id })
+    .del()
 };

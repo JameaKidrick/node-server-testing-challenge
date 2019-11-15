@@ -5,7 +5,7 @@ exports.up = function(knex) {
       .increments();
 
     table
-      .string('name', 168).notNullable().unique();
+      .string('name', 168).notNullable();
 
     table
       .timestamps(true, true);

@@ -1,3 +1,23 @@
+const hobbits = [
+  {
+    name: 'Bilbo' // 0
+  },
+  {
+    name: 'Frodo' // 1
+  },
+  {
+    name: 'Sam' // 2
+  },
+  {
+    name: 'Merry' // 3
+  },
+  {
+    name: 'Pippin' // 4
+  },
+  {
+    name: 'Smeagol' // 5
+  }
+]
 
 exports.seed = function(knex) {
   // Deletes ALL existing entries and resets ids
@@ -5,43 +25,6 @@ exports.seed = function(knex) {
     .truncate()
     .then(function () {
       // Inserts seed entries
-      return knex('hobbits').insert([
-        {
-          name: 'Bilbo'
-        },
-        {
-          name: 'Frodo'
-        },
-        {
-          name: 'Sam'
-        },
-        {
-          name: 'Merry'
-        },
-        {
-          name: 'Pippin'
-        },
-        {
-          name: 'Fatty'
-        },
-        {
-          name: 'Otho'
-        },
-        {
-          name: 'Lotho'
-        },
-        {
-          name: 'Lobelia'
-        },
-        {
-          name: 'Old Took'
-        },
-        {
-          name: 'Smeagol'
-        },
-        {
-          name: 'Deagol'
-        },
-      ]);
+      return knex('hobbits').insert(hobbits);
     });
 };
